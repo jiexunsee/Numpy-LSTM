@@ -70,7 +70,6 @@ class LSTM:
             else:
                 prev_cell_state = self.cell_states[seq_length-a-2]
             error = self.output_states[seq_length-a-1] - y[seq_length-a-1]
-            # print (error) #error is increasing instead!...
             del_output_state = error + timestep_error
             del_cell_state = del_output_state*self.output_gates[seq_length-a-1]*self.tanh_derivative(self.cell_states[seq_length-a-1]) + future_del_cell_state*future_forget_gate
             del_g = del_cell_state*self.input_gates[seq_length-a-1]*self.tanh_derivative(self.gs[seq_length-a-1])
