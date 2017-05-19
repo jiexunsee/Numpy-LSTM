@@ -162,7 +162,7 @@ if __name__ == '__main__':
     lstm = LSTM(2, 2)
 
     # lstm.train(np.array([[1,2], [1,0]]), [[1],[0]], 2, 5000, 0.05)
-    lstm.train(np.array([[1,2], [1,0]]), [[-1,-1],[1,1]], 2, 5000, 0.01)
+    lstm.train(np.array([[1,2], [1,0]]), [[-0.6,0.4],[0.1,-0.3]], 2, 5000, 0.01)
     output = lstm.run(np.array([[1,2], [1,0]]))
     output2 = lstm.run(np.array([[1,2], [1,0]]))
     
