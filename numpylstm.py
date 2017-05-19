@@ -26,6 +26,7 @@ class LSTM:
         self.cell_state = np.zeros((1, output_dim))
         self.output_state = np.zeros((1, output_dim))
 
+        # caching for backpropagation
         self.input_gates = list()
         self.forget_gates = list()
         self.output_gates = list()
@@ -33,6 +34,7 @@ class LSTM:
         self.cell_states = list()
         self.output_states = list()
 
+        # caching for backpropagation
         self.del_output_states = list()
         self.del_cell_states = list()
         self.del_gs = list()
