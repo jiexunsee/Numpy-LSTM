@@ -83,7 +83,7 @@ class LSTM:
             timestep_error = (np.dot(self.W_i, del_input_gate.T) + np.dot(self.W_f, del_forget_gate.T) + np.dot(self.W_o, del_output_gate.T) + np.dot(self.W_g, del_g.T)).T
             future_del_cell_state = del_cell_state
 
-            self.del_output_states.append(del_output_gate)
+            self.del_output_states.append(del_output_state)
             self.del_cell_states.append(del_cell_state)
             self.del_gs.append(del_g)
             self.del_input_gates.append(del_input_gate)
